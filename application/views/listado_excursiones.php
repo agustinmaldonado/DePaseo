@@ -133,7 +133,7 @@ p.icono {
 				</div>
 				<!-- form -->
 				<form class="form-horizontal"
-					ACTION="<?php echo base_url(); ?>index.php/Abmexcursiones/update"
+					ACTION="<?php echo base_url(); ?>index.php/excursiones/update"
 					METHOD="POST">
 					<fieldset>
 

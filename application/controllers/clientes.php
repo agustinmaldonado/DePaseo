@@ -22,7 +22,9 @@ class Clientes extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('clientes_model'); //cargamos el modelo
-        if($this->session->userdata('logueado')== false){
+      
+       // CONTROLA QUE ESTE LOGEADO
+        if($this->session->userdata('logueado')== false){ 
              redirect('login/index');
 
            }
@@ -108,15 +110,14 @@ class Clientes extends CI_Controller {
     function bajadb($id){
     	
     	$this->clientes_model->baja($id);
-    	//$this->baja();
-    	redirect('Clientes/baja');
+    	redirect('clientes/baja');
     }
 
     function altaDb(){
     	 
     	 $nombre = $this->input->post('nombre');
     	 $apellido = $this->input->post('apellido');
-    	 $fechanac = $this->input->post('fechaNacimiento');
+    	 $fechanac = $this->input->post('fecha1');
     	 $direccion = $this->input->post('direccion');
          $telefono = $this->input->post('telefono');
     	 $email = $this->input->post('email');
@@ -124,6 +125,7 @@ class Clientes extends CI_Controller {
     	 $direccionalojam = $this->input->post('direccionAlojamiento');
          $this->clientes_model->alta($nombre, $apellido, $fechanac, $direccion, $telefono, $email, $celular, $direccionalojam);
     	 $this->alta();
+         redirect('clientes/alta');
 
 
     }
@@ -139,7 +141,8 @@ class Clientes extends CI_Controller {
          $data['emailmodal'] = $this->input->post('emailmodal');
          $data['celularmodal'] = $this->input->post('celularmodal');
          $this->clientes_model->editar($data);
-         $this->baja();
+         
+          redirect('clientes/baja');
 
 
 

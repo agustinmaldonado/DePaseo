@@ -23,7 +23,7 @@
 				<!-- /.box-header -->
 				<!-- form start -->
 				<form class="form-horizontal"
-					ACTION="<?php echo base_url(); ?>index.php/Abmexcursiones/altaDb"
+					ACTION="<?php echo base_url(); ?>index.php/excursiones/altaDb"
 					METHOD="POST">
 					<fieldset>
 

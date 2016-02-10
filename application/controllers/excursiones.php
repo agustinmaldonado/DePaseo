@@ -1,7 +1,7 @@
 <?php
 
 
-class Abmexcursiones extends CI_Controller {
+class Excursiones extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -84,7 +84,7 @@ class Abmexcursiones extends CI_Controller {
       
    }
 
-     function altaViews(){
+     function alta(){
 
         $this->principioPagina();
         $this->load->view('form-alta-excursion');
@@ -94,7 +94,7 @@ class Abmexcursiones extends CI_Controller {
 	
 
 
-     function bajaViews(){
+     function baja(){
 
      	$this->principioPagina();
      	//Obtener datos de la tabla 'vahiculo'
@@ -110,7 +110,7 @@ class Abmexcursiones extends CI_Controller {
     function bajadb($id){
     	
     	$this->excursiones_model->baja($id);
-    	$this->bajaViews();
+    	redirect('excursiones/baja');
     }
 
     function altaDb(){
@@ -120,7 +120,7 @@ class Abmexcursiones extends CI_Controller {
     	 $precio = $this->input->post('precio');
     	 $descrepcion = $this->input->post('descrepcion');
     	 $this->excursiones_model->alta($codigo, $nombre, $duracion, $precio, $descrepcion);
-    	 $this->altaViews();
+    	redirect('excursiones/alta');
 
 
     }
@@ -134,7 +134,7 @@ class Abmexcursiones extends CI_Controller {
     	 $data['nombre'] = $this->input->post('nombre');
     	 $data['precio'] = $this->input->post('precio');
     	 $this->excursiones_model->editar($data);
-    	 $this->bajaViews();
+    	redirect('excursiones/baja');
 
 
     

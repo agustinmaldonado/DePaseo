@@ -32,8 +32,8 @@
 			
       <li class="treeview"><a href="#"><i class="fa fa-users fa-fw"></i> <span>Administrar clientes</span><i class="fa fa-angle-left pull-right"></i></a>
            <ul class="treeview-menu">
-                 <li><a href="<?php echo base_url(); ?>index.php/Clientes/alta"> <i class="fa fa-circle-o"></i>Alta</a></li>
-                 <li><a href="<?php echo base_url(); ?>index.php/Clientes/baja"><i class="fa fa-circle-o"></i>Baja - Modificacion</a></li>
+                 <li><a href="<?php echo base_url(); ?>index.php/clientes/alta"> <i class="fa fa-circle-o"></i>Alta</a></li>
+                 <li><a href="<?php echo base_url(); ?>index.php/clientes/baja"><i class="fa fa-circle-o"></i>Baja - Modificacion</a></li>
                  
           </ul>
 
@@ -43,8 +43,8 @@
 			
 		  <li class="treeview"> <a href="#"><i class="glyphicon glyphicon-th-large"></i> <span>Administrar Excursiones</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-                 <li><a href="<?php echo base_url(); ?>index.php/Abmexcursiones/altaViews"><i class="fa fa-circle-o"></i>Alta</a></li>
-                 <li><a href="<?php echo base_url(); ?>index.php/Abmexcursiones/bajaViews"><i class="fa fa-circle-o"></i>Baja</a></li>
+                 <li><a href="<?php echo base_url(); ?>index.php/excursiones/alta"><i class="fa fa-circle-o"></i>Alta</a></li>
+                 <li><a href="<?php echo base_url(); ?>index.php/excursiones/baja"><i class="fa fa-circle-o"></i>Baja</a></li>
                  
           </ul>
       </li>

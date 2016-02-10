@@ -10,9 +10,9 @@ p.icono {
 	<section class="content-header">
 		<h1>Administracion de clientes</h1>
 		<ol class="breadcrumb">
-			<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-			<li><a href="#">Tables</a></li>
-			<li class="active">Data tables</li>
+			<li><a href="<?php echo base_url(); ?>index.php/home"><i class="fa fa-dashboard"></i> Home</a></li>
+			<li  class="active">Listado de Clientes</li>
+			
 		</ol>
 	</section>
 
@@ -131,7 +131,7 @@ p.icono {
 				</div>
 				<!-- form -->
 				<form class="form-horizontal"
-					ACTION="<?php echo base_url(); ?>index.php/Abmclientes/update"
+					ACTION="<?php echo base_url(); ?>index.php/clientes/update"
 					METHOD="POST">
 					<fieldset>
 
